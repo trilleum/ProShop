@@ -18,7 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Catalog", @"Catalog");
+        self.tabBarItem.image = [UIImage imageNamed:@"179-notepad"];
     }
     return self;
 }

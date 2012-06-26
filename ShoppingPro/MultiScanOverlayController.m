@@ -33,11 +33,7 @@
 - (void) dealloc 
 {
 	if ([self isViewLoaded])
-		[self viewDidUnload];
-		
-	[barcodeTableData release];
-	
-	[super dealloc];
+		[self viewDidUnload];		
 }
 
 - (void) viewDidLoad 
@@ -49,13 +45,13 @@
 	AudioSessionSetActive(TRUE);
 
 	// Create target line object, and set its initial path
-	targetLine = [[CAShapeLayer layer] retain];
+	targetLine = [CAShapeLayer layer];
 	targetLine.fillColor = [[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5] CGColor];
 	targetLine.strokeColor = [[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5] CGColor];
 	targetLine.lineWidth = 3;
 	[self.view.layer addSublayer:targetLine];
 	CGMutablePathRef path = CGPathCreateMutable();
-	CGRect activeRegionRect = CGRectMake(0, 100, 320, 250);
+	CGRect activeRegionRect = CGRectMake(0, 50, 320, 250);
 	CGPathMoveToPoint(path, nil, CGRectGetMinX(activeRegionRect) + 40, CGRectGetMidY(activeRegionRect));
 	CGPathAddLineToPoint(path, nil, CGRectGetMaxX(activeRegionRect) - 40, CGRectGetMidY(activeRegionRect));
 	targetLine.path = path;
@@ -67,7 +63,7 @@
 	float aBufferLength = 1.0; // In seconds
 	NSURL *soundFileURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
 			pathForResource:@"beep" ofType:@"wav"] isDirectory:NO]; 
-	AudioServicesCreateSystemSoundID((CFURLRef) soundFileURL, &scanSuccessSound);
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundFileURL, &scanSuccessSound);
 	OSStatus error = AudioServicesSetProperty(kAudioServicesPropertyIsUISound,
 			sizeof(UInt32), &scanSuccessSound, sizeof(UInt32), &flag);
 	error = AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration, 
@@ -96,18 +92,12 @@
 		scanSuccessSound = 0;
 	}
 		
-	[torchButton release];
 	torchButton = nil;
-	[doneButton release];
 	doneButton = nil;
-	[rotateButton release];
 	rotateButton = nil;
-	[foundBarcodesTable release];
 	foundBarcodesTable = nil;
-	[redlaserLogo release];
 	redlaserLogo = nil;
 	
-	[targetLine release];
 	targetLine = nil;
 
 	[super viewDidUnload];
@@ -203,25 +193,25 @@
 		
 	if (previousOrientation == UIImageOrientationUp)
 	{
-		activeRegionRect = CGRectMake(100, 0, 120, 436);
+		activeRegionRect = CGRectMake(50, 0, 120, 436);
 		newOrientation = UIImageOrientationRight;
 		CGPathMoveToPoint(path, nil, CGRectGetMidX(activeRegionRect), CGRectGetMinY(activeRegionRect) + 80);
 		CGPathAddLineToPoint(path, nil, CGRectGetMidX(activeRegionRect), CGRectGetMaxY(activeRegionRect) - 80);
 	} else if (previousOrientation == UIImageOrientationRight)
 	{
-		activeRegionRect = CGRectMake(0, 100, 320, 250);
+		activeRegionRect = CGRectMake(0, 50, 320, 250);
 		newOrientation = UIImageOrientationDown;
 		CGPathMoveToPoint(path, nil, CGRectGetMaxX(activeRegionRect) - 40, CGRectGetMidY(activeRegionRect));
 		CGPathAddLineToPoint(path, nil, CGRectGetMinX(activeRegionRect) + 40, CGRectGetMidY(activeRegionRect));
 	} else if (previousOrientation == UIImageOrientationDown)
 	{
-		activeRegionRect = CGRectMake(100, 0, 120, 436);
+		activeRegionRect = CGRectMake(50, 0, 120, 436);
 		newOrientation = UIImageOrientationLeft;
 		CGPathMoveToPoint(path, nil, CGRectGetMidX(activeRegionRect), CGRectGetMaxY(activeRegionRect) - 80);
 		CGPathAddLineToPoint(path, nil, CGRectGetMidX(activeRegionRect), CGRectGetMinY(activeRegionRect) + 80);
 	} else if (previousOrientation == UIImageOrientationLeft)
 	{
-		activeRegionRect = CGRectMake(0, 100, 320, 250);
+		activeRegionRect = CGRectMake(0, 50, 320, 250);
 		newOrientation = UIImageOrientationUp;
 		CGPathMoveToPoint(path, nil, CGRectGetMinX(activeRegionRect) + 40, CGRectGetMidY(activeRegionRect));
 		CGPathAddLineToPoint(path, nil, CGRectGetMaxX(activeRegionRect) - 40, CGRectGetMidY(activeRegionRect));
@@ -233,7 +223,7 @@
 	targetLineReshaper.fillMode = kCAFillModeForwards;
 	[targetLineReshaper setRemovedOnCompletion:NO];
 	[targetLineReshaper setDelegate:self];
-	targetLineReshaper.toValue = (id) path;
+	targetLineReshaper.toValue = (__bridge id) path;
 	[targetLine addAnimation:targetLineReshaper forKey:@"animatePath"];
 	CGPathRelease(path);
 	
@@ -274,8 +264,8 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BarcodeResult"];
     if (cell == nil) 
 	{
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 
-				reuseIdentifier:@"TransparentResultOverlay"] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 
+				reuseIdentifier:@"TransparentResultOverlay"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		cell.textLabel.textColor = [UIColor whiteColor];
 		

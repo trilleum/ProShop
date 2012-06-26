@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface GPSViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIButton *closeButton;
+
+@property (strong, nonatomic) NSString* location;
+
+- (IBAction)closeButtonTapped:(id)sender;
 
 @end

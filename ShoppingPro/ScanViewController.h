@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ScanViewController.h
 //  ShoppingPro
 //
 //  Created by Tao Xie on 6/16/12.
@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RedLaserSDK.h"
 
-@interface SecondViewController : UIViewController
+@interface ScanViewController : UIViewController {
+    BarcodePickerController *pickerController;
+}
 
+- (IBAction)scanButtonPressed:(id)sender;
 @end

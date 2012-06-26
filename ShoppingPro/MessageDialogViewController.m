@@ -8,29 +8,32 @@
 
 #import "MessageDialogViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "UIView+Recursion.h"
+// #import "UIView+Recursion.h"
 @interface MessageDialogViewController ()
 
 @end
 
 @implementation MessageDialogViewController
-@synthesize titleLabel, contentLabel;
-@synthesize title, content;
-@synthesize okButton;
+@synthesize titleLabel, subjectLabel, descriptionTextView, imageView, priceLabel;
+@synthesize xButton;
+@synthesize title, subject, description, price, imageName;
 
-- (IBAction)okPressed:(id)sender {
-    NSLog(@"okPressed");
-    [self.view.window enableInteraction];
-    for (UIView* view in self.view.window.subviews) {
-        [view enableInteraction];
-    }
+- (void) xButtonTapped:(id)sender {
+    NSLog(@"xPressed");
+//    [self.view.window enableInteraction];
+//    for (UIView* view in self.view.window.subviews) {
+//        [view enableInteraction];
+//    }
     [self.view removeFromSuperview];
 }
 
-- (id)initWithTitle:(NSString*)_title content:(NSString*)_content {
+- (id)initWithTitle:(NSString*) _title subject:(NSString*)_subject description:(NSString*)_description price:(NSString*)_price image:(NSString*)_imageName; {
     if ((self = [[MessageDialogViewController alloc] initWithNibName:@"MessageDialogViewController" bundle:nil])) {
         self.title = _title;
-        self.content = _content;
+        self.subject = _subject;
+        self.description = _description;
+        self.imageName = _imageName;
+        self.price = _price;
         return self;
     }
     return nil;    
@@ -40,7 +43,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+
     }
     return self;
 }
@@ -48,9 +51,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    titleLabel.text = self.title;
-    contentLabel.text = self.content;
-    
+    [self.titleLabel setText:self.title];
+    [self.subjectLabel setText:self.subject];
+    [self.priceLabel setText:self.price];
+    [self.descriptionTextView setText:self.description];
+    [self.imageView setImage:[UIImage imageNamed:self.imageName]];
+    NSLog(@"self.xButton: %@", self.xButton);
+    [self.xButton addTarget:self action:@selector(xButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.view.layer.cornerRadius = 10;
     [self.view.layer setMasksToBounds:YES];
     [self.view setAlpha:0.90];
@@ -62,9 +69,12 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.okButton = nil;
+    self.xButton = nil;
     self.titleLabel = nil;
-    self.contentLabel = nil;
+    self.subjectLabel = nil;
+    self.priceLabel = nil;
+    self.imageView = nil;
+    self.descriptionTextView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

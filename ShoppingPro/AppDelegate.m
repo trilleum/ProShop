@@ -8,9 +8,14 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "OrganizeViewController.h"
+#import "ScanViewController.h"
+#import "SetupViewController.h"
+#import "RedLaserSDK.h"
+#import "HomeViewController.h"
+#import "InStoreLocationViewController.h"
+#import "CatalogViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -19,12 +24,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    NSLog(@"CFBundleVersion: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]);
+    NSLog(@"CFBundleIdentifier: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]);
+    NSLog(@"CFBundleDisplayName: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]);
+    // int error = rlcheckreadystatus();
+    
+    [Parse setApplicationId:@"YMUWGUBz4x5XlCwuCKT8URuAErhvW404rSoCGvQV" 
+                  clientKey:@"HC7lVNeuRLcFoXzX6kpcypSyhFwqNYID56NEAsde"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
+    UIViewController *homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    UIViewController *organizeViewController = [[OrganizeViewController alloc] initWithNibName:@"OrganizeViewController" bundle:nil];
+    
+    UIViewController *inStoreViewController = [[InStoreLocationViewController alloc] initWithNibName:@"InStoreLocationViewController" bundle:nil];
+    
+    UIViewController *catalogViewController = [[CatalogViewController alloc] initWithNibName:@"CatalogViewController" bundle:nil];
+    
+    UIViewController *viewController3 = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:homeViewController, organizeViewController, inStoreViewController, catalogViewController, viewController3, nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

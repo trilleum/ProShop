@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface MessageDialogViewController : UIViewController
-@property (nonatomic) IBOutlet UILabel *titleLabel;
-@property (nonatomic) IBOutlet UILabel *contentLabel;
-@property (nonatomic) IBOutlet UIButton *okButton;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *subjectLabel;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIButton *xButton;
 
-@property (nonatomic, copy) NSString* title;
-@property (nonatomic, copy) NSString* content;
+@property (strong, nonatomic) NSString* title;
+@property (strong, nonatomic) NSString* subject;
+@property (strong, nonatomic) NSString* price;
+@property (strong, nonatomic) NSString* description;
+@property (strong, nonatomic) NSString* imageName;
 
-- (IBAction)okPressed:(id)sender;
-- (id)initWithTitle:(NSString*)_title content:(NSString*)_content;
+- (IBAction)xButtonTapped:(id)sender;
+- (id)initWithTitle:(NSString*) _title subject:(NSString*)_subject description:(NSString*)_description price:(NSString*)_price image:(NSString*)_imageName;
 @end

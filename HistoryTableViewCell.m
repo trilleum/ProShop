@@ -9,7 +9,7 @@
 #import "HistoryTableViewCell.h"
 
 @implementation HistoryTableViewCell
-@synthesize nameLabel, dateLabel, amountLabel, statusLabel, plusminusLabel ;
+@synthesize imageView, nameLabel, priceLabel, descriptionTextView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

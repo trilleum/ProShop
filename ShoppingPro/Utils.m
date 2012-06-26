@@ -47,21 +47,18 @@
 	[data writeToFile:plistPath atomically:YES];
 }
 
-+ (NSMutableArray*)loadRecentActivities {
-    return [Utils load:recentActivitiesFileName];
++ (NSMutableArray*)loadHistory {
+    return [Utils load:historyFileName];
 }
-+ (void)saveRecentActivities:(NSMutableArray*)recentActivities {
-    if ([recentActivities count] > 100) {
-        [recentActivities removeObjectsInRange:NSMakeRange(0, 10)];
-    }
-	[Utils save:recentActivities toFile:recentActivitiesFileName];    
++ (void)saveHistory:(NSMutableArray *)history {
+	[Utils save:history toFile:historyFileName];    
 }
 
-+ (void)saveRecentActivity:(NSMutableDictionary *)recentActivity {
-    NSLog(@"ready to save recent activity:%@", recentActivity);
-    NSMutableArray* recentActivities = [Utils loadRecentActivities];
-    [recentActivities addObject:recentActivity];
-    [Utils saveRecentActivities:recentActivities];
++ (void)saveRecentScan:(NSMutableDictionary *)recentScan {
+    NSLog(@"ready to save recent activity:%@", recentScan);
+    NSMutableArray* history = [Utils loadHistory];
+    [history addObject:recentScan];
+    [Utils saveHistory:history];
 }
 
 + (NSMutableDictionary*)loadSettings {

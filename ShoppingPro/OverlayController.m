@@ -21,9 +21,7 @@
 - (void) dealloc 
 {
 	if ([self isViewLoaded])
-		[self viewDidUnload];
-		
-	[super dealloc];
+		[self viewDidUnload];		
 }
 
 - (void) viewDidLoad 
@@ -31,7 +29,7 @@
     [super viewDidLoad];
 	
 	// Create active region rectangle
-	rectLayer = [[CAShapeLayer layer] retain];
+	rectLayer = [CAShapeLayer layer];
 	rectLayer.fillColor = [[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.2] CGColor];
 	rectLayer.strokeColor = [[UIColor whiteColor] CGColor];
 	rectLayer.lineWidth = 3;
@@ -46,7 +44,7 @@
 	float aBufferLength = 1.0; // In seconds
 	NSURL *soundFileURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] 
 			pathForResource:@"beep" ofType:@"wav"] isDirectory:NO]; 
-	AudioServicesCreateSystemSoundID((CFURLRef) soundFileURL, &scanSuccessSound);
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundFileURL, &scanSuccessSound);
 	OSStatus error = AudioServicesSetProperty(kAudioServicesPropertyIsUISound,
 			sizeof(UInt32), &scanSuccessSound, sizeof(UInt32), &flag);
 	error = AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration, 
@@ -58,18 +56,12 @@
 	AudioServicesDisposeSystemSoundID(scanSuccessSound);
 	AudioSessionSetActive(FALSE);
 	
-	[rectLayer release];
 	rectLayer = nil;
 	
-	[textCue release];
 	textCue = nil;
-	[cancelButton release];
 	cancelButton = nil;
-	[frontButton release];
 	frontButton = nil;
-	[flashButton release];
 	flashButton = nil;
-	[redlaserLogo release];
 	redlaserLogo = nil;
 	
 	[super viewDidUnload];
@@ -226,7 +218,7 @@
 		
 	if (newOrientation == UIImageOrientationUp)
 	{
-		activeRegionRect = CGRectMake(0, 100, 320, 250);
+		activeRegionRect = CGRectMake(0, 50, 320, 250);
 		transform = CGAffineTransformMakeRotation(0);	
 		CGPathAddRect(path, NULL, activeRegionRect);
 	} else if (newOrientation == UIImageOrientationRight)
@@ -255,7 +247,7 @@
 	targetRectReshaper.fillMode = kCAFillModeForwards;
 	[targetRectReshaper setRemovedOnCompletion:NO];
 	[targetRectReshaper setDelegate:self];
-	targetRectReshaper.toValue = (id) path;
+	targetRectReshaper.toValue = (__bridge id) path;
 	[rectLayer addAnimation:targetRectReshaper forKey:@"animatePath"];
 	CGPathRelease(path);
 

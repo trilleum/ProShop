@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RedLaserSDK.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 

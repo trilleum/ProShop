@@ -14,9 +14,9 @@
 + (NSString*)appVersion;
 + (NSString*)appBuildNumber;
 + (NSString*)cleanString:(NSString*)str;
-+ (NSMutableArray*)loadRecentActivities;
-+ (void)saveRecentActivities:(NSMutableArray*)recentActivities;
-+ (void)saveRecentActivity:(NSMutableDictionary*)recentActivity;
++ (NSMutableArray*)loadHistory;
++ (void)saveHistory:(NSMutableArray*)history;
++ (void)saveRecentScan:(NSMutableDictionary*)recentScan;
 
 + (NSMutableDictionary*)loadSettings;
 + (void)saveSettings:(NSMutableDictionary *)settings;

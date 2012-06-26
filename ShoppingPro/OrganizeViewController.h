@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  OrganizeViewController.h
 //  ShoppingPro
 //
 //  Created by Tao Xie on 6/16/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface OrganizeViewController : UIViewController
 
 @end

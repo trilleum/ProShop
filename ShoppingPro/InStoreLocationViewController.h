@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InStoreLocationViewController : UIViewController
+@interface InStoreLocationViewController : UIViewController <UIScrollViewDelegate> {
+    UIScrollView *imageScrollView;
+	UIImageView *imageView;
+}
+
+@property (nonatomic, retain) IBOutlet UIScrollView *imageScrollView;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
 
 @end

@@ -18,10 +18,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Setup", @"Setup");
+        self.tabBarItem.image = [UIImage imageNamed:@"gear"];
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
