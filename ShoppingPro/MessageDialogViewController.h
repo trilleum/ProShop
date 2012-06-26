@@ -3,7 +3,7 @@
 //  Flash2Pay
 //
 //  Created by Tao Xie on 5/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Trilleum Interactives. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -3,7 +3,7 @@
 //  ShoppingPro
 //
 //  Created by Tao Xie on 6/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Trilleum Interactives. All rights reserved.
 //
 
 #import "HomeViewController.h"

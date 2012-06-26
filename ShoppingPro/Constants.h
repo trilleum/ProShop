@@ -3,7 +3,7 @@
 //  Flash2Pay
 //
 //  Created by Tao Xie on 4/24/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Trilleum Interactives. All rights reserved.
 //
 #define historyFileName @"ShoppingPro-history.plist"
 #define settingsFileName @"ShoppingPro-settings.plist"
