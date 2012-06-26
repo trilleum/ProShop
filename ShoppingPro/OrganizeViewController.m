@@ -13,7 +13,6 @@
 #import "UIView+LayerEffects.h"
 #import "MessageDialogViewController.h"
 #import <Parse/Parse.h>
-#import "SuggestionViewController.h"
 
 // Draggable View
 @interface DragView : UIImageView {
@@ -273,20 +272,6 @@ const NSUInteger kNumImages		= 4;
                                    userInfo:nil
                                     repeats:NO];
     
-//    [messageDialogViewController.xButton addTarget:self action:@selector(xButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-//
-//    [messageDialogViewController.xButton becomeFirstResponder];
-    // [messageDialogViewController becomeFirstResponder];
-    // [self presentModalViewController:messageDialogViewController animated:YES];
-    /*
-    SuggestionViewController *suggestionViewController = [[SuggestionViewController alloc] 
-                                                                initWithSubject:[obj objectForKey:kName] 
-                                                                description:[obj objectForKey:kDescription] 
-                                                                price:[NSString stringWithFormat:@"$%@", [obj objectForKey:kPrice]]  
-                                                                image:[obj objectForKey:kImage]];
-    
-    [self presentModalViewController:suggestionViewController animated:YES];
-     */
 }
 
 - (void) closeView:(id)sender {

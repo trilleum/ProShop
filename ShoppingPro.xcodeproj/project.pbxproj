@@ -41,8 +41,6 @@
 		D3C41FBF158DB281005C0DAF /* MessageDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C41FBD158DB27C005C0DAF /* MessageDialogViewController.m */; };
 		D3C41FC0158DB281005C0DAF /* MessageDialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C41FBE158DB27E005C0DAF /* MessageDialogViewController.xib */; };
 		D3C41FC3158DB4F6005C0DAF /* UIView+Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C41FC2158DB4F5005C0DAF /* UIView+Recursion.m */; };
-		D3C41FD5158DCE7C005C0DAF /* SuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C41FD3158DCE79005C0DAF /* SuggestionViewController.m */; };
-		D3C41FD6158DCE7C005C0DAF /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C41FD4158DCE7A005C0DAF /* SuggestionViewController.xib */; };
 		D3C41FDD158E4646005C0DAF /* scroll-view.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C41FDC158E4645005C0DAF /* scroll-view.png */; };
 		D3C41FE1158E4B85005C0DAF /* InStoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C41FDF158E4B73005C0DAF /* InStoreLocationViewController.m */; };
 		D3C41FE2158E4B85005C0DAF /* InStoreLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C41FE0158E4B7B005C0DAF /* InStoreLocationViewController.xib */; };
@@ -189,9 +187,6 @@
 		D3C41FBE158DB27E005C0DAF /* MessageDialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDialogViewController.xib; sourceTree = "<group>"; };
 		D3C41FC1158DB4F4005C0DAF /* UIView+Recursion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Recursion.h"; sourceTree = "<group>"; };
 		D3C41FC2158DB4F5005C0DAF /* UIView+Recursion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Recursion.m"; sourceTree = "<group>"; };
-		D3C41FD2158DCE78005C0DAF /* SuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionViewController.h; sourceTree = "<group>"; };
-		D3C41FD3158DCE79005C0DAF /* SuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionViewController.m; sourceTree = "<group>"; };
-		D3C41FD4158DCE7A005C0DAF /* SuggestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		D3C41FDC158E4645005C0DAF /* scroll-view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-view.png"; sourceTree = "<group>"; };
 		D3C41FDE158E4B70005C0DAF /* InStoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InStoreLocationViewController.h; sourceTree = "<group>"; };
 		D3C41FDF158E4B73005C0DAF /* InStoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InStoreLocationViewController.m; sourceTree = "<group>"; };
@@ -214,9 +209,9 @@
 		D3C42005158E754D005C0DAF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D3C42007158E76B1005C0DAF /* topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbar.png; sourceTree = "<group>"; };
 		D3C42009158E7D1E005C0DAF /* ryobi-ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ryobi-ad.png"; sourceTree = "<group>"; };
-		D3C42010158E8D26005C0DAF /* GPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSViewController.h; sourceTree = "<group>"; };
-		D3C42011158E8D2D005C0DAF /* GPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSViewController.m; sourceTree = "<group>"; };
-		D3C42012158E8D31005C0DAF /* GPSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPSViewController.xib; sourceTree = "<group>"; };
+		D3C42010158E8D26005C0DAF /* GPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSViewController.h; path = ../GPSViewController.h; sourceTree = "<group>"; };
+		D3C42011158E8D2D005C0DAF /* GPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSViewController.m; path = ../GPSViewController.m; sourceTree = "<group>"; };
+		D3C42012158E8D31005C0DAF /* GPSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GPSViewController.xib; path = ../GPSViewController.xib; sourceTree = "<group>"; };
 		D3C42015158E9268005C0DAF /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
 		D3C42017158E9420005C0DAF /* nav_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_001.png; sourceTree = "<group>"; };
 		D3C42019158E9518005C0DAF /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
@@ -369,9 +364,6 @@
 		D3F815B5158CDE4600675360 = {
 			isa = PBXGroup;
 			children = (
-				D3C42010158E8D26005C0DAF /* GPSViewController.h */,
-				D3C42011158E8D2D005C0DAF /* GPSViewController.m */,
-				D3C42012158E8D31005C0DAF /* GPSViewController.xib */,
 				D3C41F74158D6BF3005C0DAF /* RedLaser_License.xml */,
 				D3C41F4F158D466E005C0DAF /* Parse.framework */,
 				D3F816EA158D1C1000675360 /* OpenGLES.framework */,
@@ -424,30 +416,30 @@
 				D3F8164B158CE53F00675360 /* ASIHTTP */,
 				D3F815D3158CDE4700675360 /* AppDelegate.h */,
 				D3F815D4158CDE4700675360 /* AppDelegate.m */,
-				D3C41F8C158DA02D005C0DAF /* UIGlossyButton.m */,
-				D3C41F8D158DA02F005C0DAF /* UIGlossyButton.h */,
-				D3C41F9D158DA60E005C0DAF /* UIView+LayerEffects.m */,
-				D3C41F9E158DA60F005C0DAF /* UIView+LayerEffects.h */,
-				D3C41F38158D395A005C0DAF /* HomeViewController.h */,
-				D3C41F39158D395A005C0DAF /* HomeViewController.m */,
-				D3C41F3A158D395A005C0DAF /* HomeViewController.xib */,
 				D3C41F5B158D4C6E005C0DAF /* HistoryTableViewCell.h */,
 				D3C41F5C158D4C6E005C0DAF /* HistoryTableViewCell.m */,
 				D3C41F5D158D4C6E005C0DAF /* HistoryTableViewCell.xib */,
 				D3C41FED158E544A005C0DAF /* CatalogViewController.h */,
 				D3C41FEE158E544B005C0DAF /* CatalogViewController.m */,
+				D3C41F38158D395A005C0DAF /* HomeViewController.h */,
+				D3C41F39158D395A005C0DAF /* HomeViewController.m */,
+				D3C42010158E8D26005C0DAF /* GPSViewController.h */,
+				D3C42011158E8D2D005C0DAF /* GPSViewController.m */,
+				D3C42012158E8D31005C0DAF /* GPSViewController.xib */,
+				D3C41F3A158D395A005C0DAF /* HomeViewController.xib */,
 				D3C41FEF158E544D005C0DAF /* CatalogViewController.xib */,
-				D3C41FBC158DB27A005C0DAF /* MessageDialogViewController.h */,
-				D3C41FBD158DB27C005C0DAF /* MessageDialogViewController.m */,
-				D3C41FBE158DB27E005C0DAF /* MessageDialogViewController.xib */,
-				D3C41FD2158DCE78005C0DAF /* SuggestionViewController.h */,
-				D3C41FD3158DCE79005C0DAF /* SuggestionViewController.m */,
-				D3C41FD4158DCE7A005C0DAF /* SuggestionViewController.xib */,
 				D3C41FC1158DB4F4005C0DAF /* UIView+Recursion.h */,
 				D3C41FC2158DB4F5005C0DAF /* UIView+Recursion.m */,
 				D3C41F63158D5018005C0DAF /* Constants.h */,
 				D3C41F60158D5002005C0DAF /* Utils.h */,
 				D3C41F61158D5002005C0DAF /* Utils.m */,
+				D3C41FBC158DB27A005C0DAF /* MessageDialogViewController.h */,
+				D3C41FBD158DB27C005C0DAF /* MessageDialogViewController.m */,
+				D3C41FBE158DB27E005C0DAF /* MessageDialogViewController.xib */,
+				D3C41F8C158DA02D005C0DAF /* UIGlossyButton.m */,
+				D3C41F8D158DA02F005C0DAF /* UIGlossyButton.h */,
+				D3C41F9D158DA60E005C0DAF /* UIView+LayerEffects.m */,
+				D3C41F9E158DA60F005C0DAF /* UIView+LayerEffects.h */,
 				D3F816A1158CECD300675360 /* SVProgressHUD.h */,
 				D3F816A2158CECD300675360 /* SVProgressHUD.m */,
 				D3F816A3158CECD400675360 /* SVProgressHUD.bundle */,
@@ -723,7 +715,6 @@
 				D3C41FB0158DAA9C005C0DAF /* valve2.png in Resources */,
 				D3C41FB1158DAA9C005C0DAF /* hinge1.png in Resources */,
 				D3C41FC0158DB281005C0DAF /* MessageDialogViewController.xib in Resources */,
-				D3C41FD6158DCE7C005C0DAF /* SuggestionViewController.xib in Resources */,
 				D3C41FDD158E4646005C0DAF /* scroll-view.png in Resources */,
 				D3C41FE2158E4B85005C0DAF /* InStoreLocationViewController.xib in Resources */,
 				D3C41FE4158E4DB0005C0DAF /* 53-house.png in Resources */,
@@ -792,7 +783,6 @@
 				D3C41F9F158DA610005C0DAF /* UIView+LayerEffects.m in Sources */,
 				D3C41FBF158DB281005C0DAF /* MessageDialogViewController.m in Sources */,
 				D3C41FC3158DB4F6005C0DAF /* UIView+Recursion.m in Sources */,
-				D3C41FD5158DCE7C005C0DAF /* SuggestionViewController.m in Sources */,
 				D3C41FE1158E4B85005C0DAF /* InStoreLocationViewController.m in Sources */,
 				D3C41FF0158E544F005C0DAF /* CatalogViewController.m in Sources */,
 				D3C42013158E8D32005C0DAF /* GPSViewController.m in Sources */,
