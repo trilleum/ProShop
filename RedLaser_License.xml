@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>-NOTICE-</key>
+	<string>THIS FILE IS DIGITALLY SIGNED. DO NOT MODIFY.</string>
+	<key>Company Name</key>
+	<string>Cloudacl Inc.</string>
+	<key>iOS</key>
+	<dict>
+		<key>App Bundle IDs</key>
+		<array>
+			<string>com.trilleum.ShoppingPro</string>
+			<string>ShoppingPro</string>
+		</array>
+	</dict>
+	
+</dict>
+</plist>
+-----BEGIN SIGNATURE-----
+XU63JjbXgxuQ/KakUxm5RbXAWhJgseyzf/IlxDz0n5zwmjLAo0JKQl07KoIR8Cu4
+/k1t/eHAI58KVN1exLpqJRL7Cv+td/fvhS1kUaupwQvrLUaNFpQLpEKIsipRXjSo
+7905xPkjdZ/geEHl2yvy9SUSEeHwZ8k60hBC3tlcRUpcyyUth0HY1yXWUX2xDaKp
+hJt5POv+4Fwmd+NyWpxHrYII3d7OQFIhX3i8YJG9UJfv6mA1NrR+xk9gxW/eeCZB
+4L/UX+Sj+sk6HmHUqL+EXU4v4WXF/SPRDciydw5gaFn8RL/M9isOiyoqbU2gd/4B
+Zd3334LEkfmDkuMgvmalNwtPYkip5NgVv8HbOEKHZUHtyKhUMvGucf3DS8L1zdC4
+FE9yhMcYWK6jFCLd7gJF8cIGjk8PVAwC3l3q3ecdxG/I2p02w2eA71Ys0cFNegTH
+W7Herhv4mhERUpzLn7XgikAq88lf+0/Ypug+o7XTNQaKGniZAMLDPuRie7Y0dFpL
+uVja/PVwTylmEka3fC1BW4wCohSeKmLekO+qJJJbRy5ZslwFlrQDxxcXUmPw+0Aj
+N1sV5IFWgjP7q+O3xVOT/JLn6xNHeFV80ZAG3VS4JXSOUScPtjNih3mHYunpJKU2
+uZ8EpdlwIB9ZcZHyyLSUYd3ltl1Znt4v41HQFeXPDAY=
+-----END SIGNATURE-----
